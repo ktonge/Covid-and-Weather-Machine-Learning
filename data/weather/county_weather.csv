@@ -1,4 +1,4 @@
-,date,county,state,temp_max(C),precip_sum(mm),wind_max(km/h),min_humidity(%),max_humidity(%),mean_humidity(%)
+,date,county,state,temp_mean(C),precip_sum(mm),wind_max(km/h),min_humidity(%),max_humidity(%),mean_humidity(%)
 0,2020-01-01,baltimore,maryland,4.7,0.0,20.9,42,72,54.0
 1,2020-01-02,baltimore,maryland,4.2,0.0,18.8,64,84,72.0
 2,2020-01-03,baltimore,maryland,9.0,6.8,18.0,68,100,92.0
