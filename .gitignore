@@ -1,4 +1,9 @@
+# configuration file(s)
+config.py
+
+# macOS
 .DS_store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
