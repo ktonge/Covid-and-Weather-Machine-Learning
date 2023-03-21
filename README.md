@@ -19,3 +19,6 @@ Is there a correlation between temperature and the number of COVID-19 cases?
 How does the relationship between temperature and COVID-19 cases differ across different cities or regions?
 Can we use machine learning models to predict the number of COVID-19 cases based on temperature and other variables such as population density or public transit use?
 
+## Conclusion
+The project aims to explore the relationship between weather and COVID-19 cases by using multiple linear regression analysis on combined datasets. The study faced challenges in determining the scope of the project due to the vast amount of available data. We focused on comparing counties with population density and mask mandates as the criteria for selection. The COVID-19 data was collected and cleaned and created new columns for future delta7 and future delta14. The questions to be answered include identifying the correlation between temperature and COVID-19 cases, regional differences in the relationship, and the potential use of machine learning models to predict COVID-19 cases based on various factors. The project has the potential to provide insights into the impact of weather on the spread of COVID-19, which could have implications for future pandemic response strategies.
+
