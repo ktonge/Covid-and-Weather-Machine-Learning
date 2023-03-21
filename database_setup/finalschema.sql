@@ -1,20 +1,16 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
-
+﻿
 CREATE TABLE "county_weather" (
+	"index" int,
     "date" date   NOT NULL,
-    "county" varchar   NOT NULL,
-    "state" varchar   NOT NULL,
+    "county" varchar(10)   NOT NULL,
+    "state" varchar(10)   NOT NULL,
     "temp_mean(c)" int ,
     "precip_sum(mm)" int,
     "wind_max(km/h)" int,
     "min_humidity(%)" int,
     "max_humidity(%)" int,
     "mean_humidity(%)" int,
-    PRIMARY KEY (
-        "date"
-     )
+	PRIMARY KEY ("date")
 );
 
 CREATE TABLE "sparse_county_covid" (
@@ -24,10 +20,7 @@ CREATE TABLE "sparse_county_covid" (
     "total_cases" int,
     "new_cases" int,
     "future_delta7" int,
-    "future_delta14" int,
-    PRIMARY KEY (
-        "date"
-     )
+    "future_delta14" int
 );
 
 CREATE TABLE "dense_county_covid" (
@@ -37,15 +30,5 @@ CREATE TABLE "dense_county_covid" (
     "total_cases" int,
     "new_cases" int,
     "future_delta7" int,
-    "future_delta14" int,
-    PRIMARY KEY (
-        "date"
-     )
+    "future_delta14" int
 );
-
-ALTER TABLE "sparse_county_covid" FOREIGN KEY("date", "county", "state")
-REFERENCES "county_weather" ("date", "county", "state");
-
-ALTER TABLE "dense_county_covid" FOREIGN KEY("date", "county", "state")
-REFERENCES "county_weather" ("date", "county", "state");
-
