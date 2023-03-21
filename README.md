@@ -5,6 +5,13 @@
 As a group we're looking at combining weather and Covid 19 datasets.  We are hoping to use multiple linear regression to determine what, if any effect, does weather have on the covid infection rate. 
 When looking at databases, we discovered that our most immediate challenge would be determining scope of the study.  There are massive amounts of weather and covid data. We started doing research into pre-existing papers on the topic. We started out looking at the relationship between weather and the spread of Covid-19, after reviewing existing research, we chose to create three tables: one for county weather data and two for covid data (separated into sparse and dense by population density in the county).  
 
+
+## Benefis of Analysis 
+Improved understanding of the relationship between weather and Covid-19 infection rates: By using multiple linear regression to explore the relationship between weather and Covid-19 infection rates, your analysis may provide new insights into how weather conditions impact the spread of the virus. This information could be useful for public health officials and policymakers in developing targeted strategies for controlling the spread of Covid-19.
+Identification of high-risk areas: Your analysis may also help identify areas that are particularly vulnerable to Covid-19 outbreaks based on weather conditions. This information could be useful for directing resources and interventions to those areas in order to mitigate the spread of the virus.
+Contribution to scientific knowledge: By conducting this analysis and sharing your findings with others, you are contributing to the scientific understanding of Covid-19 and its relationship to weather conditions. This information may be useful for future research and could help inform public health policies and practices aimed at controlling the spread of the virus.
+
+
 ### Working with the Covid Data
 We found our covid data first, which was organized by counties.  We were choosing counties to compare, and initially struggled with what counties to compare.  We chose the following criteria: population density and covid mask mandates. To make our counties all comparable, we only chose counties that did instate a mask mandate. We chose two selections of counties: counties with a population density of 1000-2999 people/square mile as our sparse group, and counties with a population density of 4000-6999 people/square mile as our dense group.  We used data collected by the US census to determine county population density.
 Our two county groups were:
