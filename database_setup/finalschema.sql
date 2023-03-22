@@ -1,6 +1,6 @@
 ﻿
 CREATE TABLE "county_weather" (
-	"index" int,
+	"index" int NOT NULL,
     "date" date   NOT NULL,
     "county" varchar(10)   NOT NULL,
     "state" varchar(10)   NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE "county_weather" (
 );
 
 CREATE TABLE "sparse_county_covid" (
-    "index" int,
+    "index" int NOT Null,
     "date" date NOT NULL,
     "county" varchar NOT NULL,
     "state" varchar NOT NULL,
@@ -22,15 +22,17 @@ CREATE TABLE "sparse_county_covid" (
     "new_cases" int,
     "future_delta7" int,
     "future_delta14" int
+    PRIMARY KEY ("index")
 );
 
 CREATE TABLE "dense_county_covid" (
-    "index" int,
+    "index" int NOT NULL,
     "date" date NOT NULL,
     "county" varchar NOT NULL,
     "state" varchar NOT NULL,
     "total_cases" int,
     "new_cases" int,
     "future_delta7" int,
-    "future_delta14" int
+    "future_delta14" int,
+    PRIMARY KEY ("index")
 );
