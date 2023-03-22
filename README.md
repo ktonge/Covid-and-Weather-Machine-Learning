@@ -13,7 +13,7 @@ Contribution to scientific knowledge: By conducting this analysis and sharing yo
 
 
 ### Working with the Covid Data
-We found our covid data first, which was organized by counties.  We were choosing counties to compare, and initially struggled with what counties to compare. *Write about cdc metropolitan stuff here*   
+We found our covid data first, which was organized by counties.  We were choosing counties to compare, and initially struggled with what counties to compare. *Write about cdc metropolitan stuff here*  The CDC also has criteria for grouping cities.  These groups range from rural to metropolitan.  Most of the cities in our dense county group fall into major and minor metropolitan areas (a key difference between them and the sparse county group) 
 
 We chose the following criteria: population density and covid mask mandates. To make our counties all comparable, we only chose counties that did instate a mask mandate. We chose two selections of counties: counties with a population density of 1000-2999 people/square mile as our sparse group, and counties with a population density of 4000-6999 people/square mile as our dense group.  We used data collected by the US census to determine county population density.
 Our two county groups were:
