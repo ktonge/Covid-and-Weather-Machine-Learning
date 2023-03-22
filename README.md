@@ -13,11 +13,14 @@ Contribution to scientific knowledge: By conducting this analysis and sharing yo
 
 
 ### Working with the Covid Data
-We found our covid data first, which was organized by counties.  We were choosing counties to compare, and initially struggled with what counties to compare.  We chose the following criteria: population density and covid mask mandates. To make our counties all comparable, we only chose counties that did instate a mask mandate. We chose two selections of counties: counties with a population density of 1000-2999 people/square mile as our sparse group, and counties with a population density of 4000-6999 people/square mile as our dense group.  We used data collected by the US census to determine county population density.
+We found our covid data first, which was organized by counties.  We were choosing counties to compare, and initially struggled with what counties to compare. *Write about cdc metropolitan stuff here*   
+
+We chose the following criteria: population density and covid mask mandates. To make our counties all comparable, we only chose counties that did instate a mask mandate. We chose two selections of counties: counties with a population density of 1000-2999 people/square mile as our sparse group, and counties with a population density of 4000-6999 people/square mile as our dense group.  We used data collected by the US census to determine county population density.
 Our two county groups were:
 
 Dense Counties: Baltimore City, Maryland; Essex, New Jersey; Cook, Illinois; Union, New Jersey; Norfolk, Virginia; Nassau, New York; Harrisonburg, Virginia
 Sparse Counties: Fairfax County, Virginia; Camden County, New Jersey; Harris County, Texas; Franklin County, Ohio; Marion County, Indiana; Dekalb County, Georgia; Duval County, Florida; Wake County, North Carolina; Bexar County, Texas 
+
 
 We then collected and cleaned the covid data, including creating two new columns, future_delta7 and future_delta14 which represent the change in number of covid cases from today to 7 days and 14 days from today respectively.We were looking to answer questions about how does the weather in the past impact covid cases in the future.  Does the temperature two weeks previously affect the covid infection rate? 
 
