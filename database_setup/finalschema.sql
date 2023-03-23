@@ -2,15 +2,15 @@
 CREATE TABLE "county_weather" (
 	"index" int NOT NUll,
     "date" date   NOT NULL,
-    "county" varchar(10)   NOT NULL,
-    "state" varchar(10)   NOT NULL,
+    "county" varchar(25)   NOT NULL,
+    "state" varchar(25)   NOT NULL,
     "temp_mean(c)" float,
     "precip_sum(mm)" float,
     "wind_max(km/h)" float,
     "min_humidity(%)" float,
     "max_humidity(%)" float,
     "mean_humidity(%)" float,
-	PRIMARY KEY ("index")
+	PRIMARY KEY ('date', 'county')
 );
 
 CREATE TABLE "sparse_county_covid" (
@@ -22,7 +22,7 @@ CREATE TABLE "sparse_county_covid" (
     "new_cases" int,
     "future_delta7" int,
     "future_delta14" int
-    PRIMARY KEY ("index")
+    PRIMARY KEY ('date', 'county')
 );
 
 CREATE TABLE "dense_county_covid" (
@@ -34,5 +34,5 @@ CREATE TABLE "dense_county_covid" (
     "new_cases" int,
     "future_delta7" int,
     "future_delta14" int
-    PRIMARY KEY ("index")
+    PRIMARY KEY ('date', 'county')
 );
