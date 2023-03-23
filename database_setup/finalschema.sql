@@ -10,7 +10,7 @@ CREATE TABLE "county_weather" (
     "min_humidity(%)" float,
     "max_humidity(%)" float,
     "mean_humidity(%)" float,
-	PRIMARY KEY ('date', 'county')
+	PRIMARY KEY (date, county)
 );
 
 CREATE TABLE "sparse_county_covid" (
@@ -22,7 +22,7 @@ CREATE TABLE "sparse_county_covid" (
     "new_cases" int,
     "future_delta7" int,
     "future_delta14" int
-    PRIMARY KEY ('date', 'county')
+    PRIMARY KEY (date, county)
 );
 
 CREATE TABLE "dense_county_covid" (
@@ -34,5 +34,5 @@ CREATE TABLE "dense_county_covid" (
     "new_cases" int,
     "future_delta7" int,
     "future_delta14" int
-    PRIMARY KEY ('date', 'county')
+    PRIMARY KEY (date, county)
 );
