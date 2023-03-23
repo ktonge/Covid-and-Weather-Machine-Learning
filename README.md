@@ -48,12 +48,46 @@ We created a database from the tables above in pg admin, we then connected it wi
 
 ## Preliminary Analysis 
 ### Covid Data
-+ how many data points we have
-+ trends in data 
-+ descriptive statistics 
++ Source: [COVID-19 in USA](https://www.kaggle.com/datasets/sudalairajkumar/covid19-in-usa?select=us_counties_covid19_daily.csv) on Kaggle.
++ There are a total of 1933 and 2484 covid data points for the dense and sparse county groups respectively.
++ Columns (\*\* indicates a column created from raw data):
+    + `date` - the date of the observation
+    + `county` - the county in which the observation was made
+    + `state` - the state in which the observation was made
+    + `total_cases` - a running total of cases by day
+    + `new_cases`\*\* - new cases recorded on this data
+    + `future_delta7`\*\* - the total number of new cases 7 days from now
+    + `future_delta14`\*\* - the total number of new cases 14 days from now
+
++ Dense County Data Set Descriptive Statistics:
+
+![resources/dense_covid_stats.png](resources/dense_covid_stats.png)
+
++ Sparse County Data Set Descriptive Statistics:
+
+![resources/sparse_covid_stats.png](resources/sparse_covid_stats.png)
+
+
 ### Weather Data
-+ data points
-+ descriptive statistics
++ Source: [Open-Meteo](https://open-meteo.com/en/docs/historical-weather-api#latitude=39.96&longitude=-83.00&start_date=2023-02-14&end_date=2023-03-15&hourly=temperature_2m).
++ There are 2562 and 3294 weather data points for the dense and sparse county groups respectively. Weather data was compiled for the entire year of 2020.
++ Columns:
+    + `date` - date of the observation
+    + `county` - county in which the observation was made
+    + `state` - state in which the observation was made
+    + `temp_mean(C)` - mean temperature for the day in Celcius
+    + `precip_sum(mm)` - total precipitation for the day in millimeters
+    + `wind_max(km/h)` - the maximum wind observation for the day at 10 meters above ground in kilometers per hour
+    + `min_humidity(%)` - the minimum humidity observation for the day as a percentage
+    + `max_humidity(%)` - the maximum humidity observation for the day as a percentage
+    + `mean_humidity(%)` - the arithmetic mean of hourly humidity observations for the data as a percentage.
++ Dense County Data Set Descriptive Statistics:
+
+![resources/dense_weather_stats.png](resources/dense_weather_stats.png)
+
++ Sparse County Data Set Descriptive Statistics:
+
+![resources/sparse_weather_stats.png](resources/sparse_weather_stats.png)
 
 ## Outline for Presentation 
 1. Introduction to the topic
