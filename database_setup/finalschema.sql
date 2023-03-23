@@ -21,7 +21,7 @@ CREATE TABLE "sparse_county_covid" (
     "total_cases" int,
     "new_cases" int,
     "future_delta7" int,
-    "future_delta14" int
+    "future_delta14" int,
     PRIMARY KEY (date, county)
 );
 
@@ -33,6 +33,6 @@ CREATE TABLE "dense_county_covid" (
     "total_cases" int,
     "new_cases" int,
     "future_delta7" int,
-    "future_delta14" int
+    "future_delta14" int,
     PRIMARY KEY (date, county)
 );
