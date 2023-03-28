@@ -47,6 +47,12 @@ This section can be shorter than the covid section because we did spend alot of 
 We created a database from the tables above in pg admin, we then connected it with the AWS server for ease of sharing and group access.  
 
 ## Preliminary Analysis 
+
+### County Data
++ **Source**
++ **Columns and Data Points**
++ **Column Descriptions**
+
 ### Covid Data
 + Source: [COVID-19 in USA](https://www.kaggle.com/datasets/sudalairajkumar/covid19-in-usa?select=us_counties_covid19_daily.csv) on Kaggle.
 + There are a total of 1933 and 2484 covid data points for the dense and sparse county groups respectively.
@@ -56,6 +62,7 @@ We created a database from the tables above in pg admin, we then connected it wi
     + `state` - the state in which the observation was made
     + `total_cases` - a running total of cases by day
     + `new_cases`\*\* - new cases recorded on this data
+    + `past_delta7`\*\* - the total number of new cases for the past 14 days
     + `future_delta7`\*\* - the total number of new cases 7 days from now
     + `future_delta14`\*\* - the total number of new cases 14 days from now
 
@@ -111,3 +118,12 @@ The project aims to explore the relationship between weather and COVID-19 cases 
     By using multiple linear regression to explore the relationship between weather and Covid-19 infection rates, your analysis may provide new insights into how weather conditions impact the spread of the virus. This information could be useful for public health officials and policymakers in developing targeted strategies for controlling the spread of Covid-19.
 + Identification of high-risk areas: 
     Your analysis may also help identify areas that are particularly vulnerable to Covid-19 outbreaks based on weather conditions. This information could be useful for directing resources and interventions to those areas in order to mitigate the spread of the virus.
+
+## Technologies Used
++ Python v3.10.9
++ Pandas v1.5.3
++ SciKit Learn v1.2.1
++ Postgres (via AWS) v
++ Jupyter Notebook v6.5.2
++ SQLAlchemy v2.0.7
++ pgAdmin v6.16
