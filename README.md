@@ -125,5 +125,5 @@ The project aims to explore the relationship between weather and COVID-19 cases 
 + SciKit Learn v1.2.1
 + Postgres (via AWS) v
 + Jupyter Notebook v6.5.2
-+ SQLAlchemy v2.0.7
++ SQLAlchemy v1.4.47 (v 1.4 required for [MLR_model_2](models/MLR_model_2.ipynb))
 + pgAdmin v6.16
