@@ -62,8 +62,7 @@ We created a database from the tables above in pg admin, we then connected it wi
     + `state` - the state in which the observation was made
     + `total_cases` - a running total of cases by day
     + `new_cases`\*\* - new cases recorded on this data
-    + `past_delta7`\*\* - the total number of new cases for the past 14 days
-    + `future_delta7`\*\* - the total number of new cases 7 days from now
+    + `past_delta14`\*\* - the total number of new cases for the past 14 days
     + `future_delta14`\*\* - the total number of new cases 14 days from now
 
 + Dense County Data Set Descriptive Statistics:
@@ -96,6 +95,39 @@ We created a database from the tables above in pg admin, we then connected it wi
 
 ![resources/sparse_weather_stats.png](resources/sparse_weather_stats.png)
 
+### County Data
++ Columns:
+    + `state` - state in which the observation took place
+    + `county` - county in which the observation took place
+    + `avg_household` - avgerage number of people living in each household
+    + `total_pop` - the total population of the county
+    + `pop_dens(/sqmi)` - the population density per square mile
++ Dense County Data Set Descriptive Statistics:
+
+![resources/dense_county_stats.png](resources/dense_county_stats.png)
+
++ Sparse County Data Set Descriptive Statistics:
+
+![resources/sparse_county_stats.png](resources/sparse_county_stats.png)
+
+
+### Data Models
+Given two sets of county data, we elected to make two models - one for each set. The models are built the same way, though using their respective data. We used a Multiple Linear Regression model feeding all quantitative data into it. The follow were the results of the model.
+
++ Dense County Model:
+
+![resources/dense_model_seg02.png](resources/dense_model_seg2.png)
+
++ Sparse County Model:
+
+![resources/sparse_model_seg02.png](resources/sparse_model_seg2.png)
+
+As can be seen, the Dense Model performed far better than the sparse model. There are two possibilities that we suspect for this.
+
+1. There are fewer observations in the Dense County data set, and so the model is required to generalize less than the Sparse County Model.
+
+2. There is a significant, underlying difference between the counties in the Sparse data set that is not captured in the above data.
+
 ## Outline for Presentation 
 1. Introduction to the topic
 2. Overview of database
@@ -125,5 +157,5 @@ The project aims to explore the relationship between weather and COVID-19 cases 
 + SciKit Learn v1.2.1
 + Postgres (via AWS) v
 + Jupyter Notebook v6.5.2
-+ SQLAlchemy v2.0.7
++ SQLAlchemy v1.4.47 (v 1.4 required for [MLR_model_2](models/MLR_model_2.ipynb))
 + pgAdmin v6.16
