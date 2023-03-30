@@ -3,9 +3,8 @@
 
 
 CREATE TABLE "county_pop" (
-    "index" int   NOT NULL,
-    "county" varchar(25) UNIQUE  NOT NULL,
     "state" varchar(25)   NOT NULL,
+    "county" varchar(25) UNIQUE  NOT NULL,
     "avg_household" FLOAT   NULL,
     "total_pop" INT   NULL,
     "pop_dens(/sqmi)" FLOAT   NULL,
