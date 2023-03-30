@@ -31,13 +31,13 @@ We used the following methodology to produce the list of counties, from which we
     We chose counties that did institute a formal county level mask mandate. 
 
 ### Working with the Weather Data
-+ What variables we chose to look at
 Once we had identified the counties we were interested in, we found weather data for each county by day.  We pulled out the average temperature, precipitation, windspeed, and ran into some complications surrounding hummidity.  We were interested in exploring it, but need to do further research to best understand what the data represents.  For now we have an average daily percent humidity column, as well as a min and max percent humidity for each day.  
+
 ### Database
 We created a database from the tables above in pg admin, we then connected it with the AWS server for ease of sharing and group access.  
 
-## Preliminary Analysis 
 
+## Analysis
 ### County Data
 + Source: [NCHS Urban-Rural Classification Scheme for Counties](https://www.cdc.gov/nchs/data_access/urban_rural.html)
 [Average Household Size and Population Density from U.S. Census Bureau's 2014 - 2018 American Community Survey](https://covid19.census.gov/datasets/21843f238cbb46b08615fc53e19e0daf_1/explore?location=4.431457%2C0.315550%2C0.82)
@@ -48,6 +48,14 @@ We created a database from the tables above in pg admin, we then connected it wi
     + total_pop - the total county population
     + pop_dens(/sqmi) - the population density for the county
     + nchs_code_2013 - the NCHS Urban-Rural Classification code for the county 
+
++ Dense County Data Set Descriptive Statistics:
+
+![resources/dense_county_stats.png](resources/dense_county_stats.png)
+
++ Sparse County Data Set Descriptive Statistics:
+
+![resources/sparse_county_stats.png](resources/sparse_county_stats.png)
 
 
 ### Covid Data
@@ -92,21 +100,6 @@ We created a database from the tables above in pg admin, we then connected it wi
 
 ![resources/sparse_weather_stats.png](resources/sparse_weather_stats.png)
 
-### County Data
-+ Columns:
-    + `state` - state in which the observation took place
-    + `county` - county in which the observation took place
-    + `avg_household` - avgerage number of people living in each household
-    + `total_pop` - the total population of the county
-    + `pop_dens(/sqmi)` - the population density per square mile
-+ Dense County Data Set Descriptive Statistics:
-
-![resources/dense_county_stats.png](resources/dense_county_stats.png)
-
-+ Sparse County Data Set Descriptive Statistics:
-
-![resources/sparse_county_stats.png](resources/sparse_county_stats.png)
-
 
 ### Data Models
 Given two sets of county data, we elected to make two models - one for each set. The models are built the same way, though using their respective data. We used a Multiple Linear Regression model feeding all quantitative data into it. The follow were the results of the model.
@@ -129,7 +122,6 @@ As can be seen, the Dense Model performed far better than the sparse model. Ther
 The project aims to explore the relationship between weather and COVID-19 cases by using multiple linear regression analysis on combined datasets. The study faced challenges in determining the scope of the project due to the vast amount of available data. We focused on comparing counties with population density and mask mandates as the criteria for selection. The COVID-19 data was collected and cleaned and created new columns for future delta7 and future delta14. The questions to be answered include identifying the correlation between temperature and COVID-19 cases, regional differences in the relationship, and the potential use of machine learning models to predict COVID-19 cases based on various factors. The project has the potential to provide insights into the impact of weather on the spread of COVID-19, which could have implications for future pandemic response strategies.
 
 ### Future Research
-+ <b> add another point here about where what we should look into in the future based on our initial findings </b> 
 + Improved understanding of the relationship between weather and Covid-19 infection rates: 
     By using multiple linear regression to explore the relationship between weather and Covid-19 infection rates, your analysis may provide new insights into how weather conditions impact the spread of the virus. This information could be useful for public health officials and policymakers in developing targeted strategies for controlling the spread of Covid-19.
 + Identification of high-risk areas: 
@@ -139,8 +131,7 @@ The project aims to explore the relationship between weather and COVID-19 cases 
 + Limiations based on our county selection
 We chose a small number of cities based on their population density and National Center for Health Statistics rating.  This was intended to create a manageable pool of data that we could process in the time provided. However, it does mean that we don't know how this model applies to rural/non-metropolitan areas. 
 + Limitations to the covid data
-+ Limiations from working with weather data 
-+ There are alot of limitations so whatever anyone else can think of 
+There were questions, for example, about counties reporting an increased number of cases on Monday because they were counting cases from the weekend in that number. We created future and past delta variables to give us a variable for active cases at one time, we were limited by the data collection.  
 
 ## Technologies Used
 + Python v3.10.9
@@ -150,3 +141,4 @@ We chose a small number of cities based on their population density and National
 + Jupyter Notebook v6.5.2
 + SQLAlchemy v1.4.47 (v 1.4 required for [MLR_model_2](models/MLR_model_2.ipynb))
 + pgAdmin v6.16
++ Postgres v11.19
