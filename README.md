@@ -17,7 +17,7 @@ When looking at databases, we discovered that our most immediate challenge would
 ### Working with the Covid Data
 We knew we were interested in working with Covid Data right away, we found our Covid dataset first, and looked at what kind of questions we wanted to ask with it. The first decision we were faced with was which counties to use, as we unfortunately lacked the capacity to do this with the entirity of the United States. 
 
-We then collected and cleaned the covid data using pandas.  We created a dataframe from daily covid cases data, and used that data to create a column for total cases on that date, as well as  future_delta7 and future_delta14 which represent the change in number of covid cases from today to 7 days and 14 days from today respectively. We were looking to answer questions about how does the weather in the past impact covid cases in the future.
+To process the COVID-19 data, we utilized the powerful data analysis library, Pandas. We created a dataframe from the daily COVID-19 cases data, and from there, generated several key variables. Specifically, we developed a column for the total number of cases on each date, and created future_delta7 and future_delta14 columns, representing the change in COVID-19 cases from today to 7 and 14 days in the future, respectively. Our primary focus was to explore how past weather patterns might impact future COVID-19 incidence.
 
 #### County Selection 
 We used the following methodology to produce the list of counties, from which we pulled a random selection. 
@@ -31,8 +31,7 @@ We used the following methodology to produce the list of counties, from which we
     We chose counties that did institute a formal county level mask mandate. 
 
 ### Working with the Weather Data
-Once we had identified the counties we were interested in, we found weather data for each county by day.  We pulled out the average temperature, precipitation, windspeed, and ran into some complications surrounding hummidity.  We were interested in exploring it, but need to do further research to best understand what the data represents.  For now we have an average daily percent humidity column, as well as a min and max percent humidity for each day.  
-
+Once we had identified the counties we were interested in, we proceeded to gather weather data for each county on a daily basis. We extracted several key variables including the average temperature, precipitation, and wind speed. However, we encountered some challenges when working with the humidity data. While we were interested in exploring this variable, we realized that further research was necessary to fully understand the data and its interpretation. As a result, we currently have an average daily percentage humidity column, as well as minimum and maximum percentage humidity columns for each day. Despite the limitations, we believe that the weather data we were able to collect provides valuable insights into the potential relationship between weather patterns and COVID-19 incidence in the selected counties.
 ### Database
 We created a database from the tables above in pg admin, we then connected it with the AWS server for ease of sharing and group access.  
 
@@ -102,7 +101,7 @@ We created a database from the tables above in pg admin, we then connected it wi
 
 
 ### Data Models
-Given two sets of county data, we elected to make two models - one for each set. The models are built the same way, though using their respective data. We used a Multiple Linear Regression model feeding all quantitative data into it. The follow were the results of the model.
+We decided to create two separate models, each corresponding to a specific set of county data. While the models were constructed in the same manner, they were trained using their respective datasets. Specifically, we employed a Multiple Linear Regression model and fed all relevant quantitative data into it. The resulting model outputs are summarized below.
 
 + Dense County Model:
 
