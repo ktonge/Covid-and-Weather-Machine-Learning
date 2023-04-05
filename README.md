@@ -101,7 +101,7 @@ We created a database from the tables above in pg admin, we then connected it wi
 
 
 ### Data Models
-Given two sets of county data, we elected to make two models - one for each set. The models are built the same way, though using their respective data. We used a Multiple Linear Regression model feeding all quantitative data into it. The follow were the results of the model.
+We decided to create two separate models, each corresponding to a specific set of county data. While the models were constructed in the same manner, they were trained using their respective datasets. Specifically, we employed a Multiple Linear Regression model and fed all relevant quantitative data into it. The resulting model outputs are summarized below.
 
 + Dense County Model:
 
