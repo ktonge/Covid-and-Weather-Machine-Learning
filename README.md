@@ -17,7 +17,7 @@ When looking at databases, we discovered that our most immediate challenge would
 ### Working with the Covid Data
 We knew we were interested in working with Covid Data right away, we found our Covid dataset first, and looked at what kind of questions we wanted to ask with it. The first decision we were faced with was which counties to use, as we unfortunately lacked the capacity to do this with the entirity of the United States. 
 
-We then collected and cleaned the covid data using pandas.  We created a dataframe from daily covid cases data, and used that data to create a column for total cases on that date, as well as  future_delta7 and future_delta14 which represent the change in number of covid cases from today to 7 days and 14 days from today respectively. We were looking to answer questions about how does the weather in the past impact covid cases in the future.
+To process the COVID-19 data, we utilized the powerful data analysis library, Pandas. We created a dataframe from the daily COVID-19 cases data, and from there, generated several key variables. Specifically, we developed a column for the total number of cases on each date, and created future_delta7 and future_delta14 columns, representing the change in COVID-19 cases from today to 7 and 14 days in the future, respectively. Our primary focus was to explore how past weather patterns might impact future COVID-19 incidence.
 
 #### County Selection 
 We used the following methodology to produce the list of counties, from which we pulled a random selection. 
