@@ -31,8 +31,7 @@ We used the following methodology to produce the list of counties, from which we
     We chose counties that did institute a formal county level mask mandate. 
 
 ### Working with the Weather Data
-Once we had identified the counties we were interested in, we found weather data for each county by day.  We pulled out the average temperature, precipitation, windspeed, and ran into some complications surrounding hummidity.  We were interested in exploring it, but need to do further research to best understand what the data represents.  For now we have an average daily percent humidity column, as well as a min and max percent humidity for each day.  
-
+After identifying the counties of interest, we proceeded to gather weather data for each county on a daily basis. We extracted several key variables including the average temperature, precipitation, and wind speed. However, we encountered some challenges when working with the humidity data. While we were interested in exploring this variable, we realized that further research was necessary to fully understand the data and its interpretation. As a result, we currently have an average daily percentage humidity column, as well as minimum and maximum percentage humidity columns for each day. Despite the limitations, we believe that the weather data we were able to collect provides valuable insights into the potential relationship between weather patterns and COVID-19 incidence in the selected counties.
 ### Database
 We created a database from the tables above in pg admin, we then connected it with the AWS server for ease of sharing and group access.  
 
