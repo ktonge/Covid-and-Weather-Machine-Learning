@@ -3,7 +3,7 @@
 # Deliverable 2
 [You can access the slides for our presenation here](https://docs.google.com/presentation/d/1bmWt08kAk6qkuKMaIf04VX2puugKRtD1Zavwt2B1TGY/edit?usp=sharing)
 
-[You can access our tableau dashboard here](https://github.com/ktonge/group2finalproject)
+[You can access our tableau dashboard here](https://public.tableau.com/app/profile/karl4512/viz/covid_and_weather/Story1)
 
 ## Selected Topic and Reasoning   
 As a group we're looking at combining weather and Covid 19 datasets.  We are hoping to use multiple linear regression to determine what, if any effect, does weather have on the covid infection rate. 
