@@ -3,6 +3,8 @@
 # Deliverable 2
 [You can access the slides for our presenation here](https://docs.google.com/presentation/d/1bmWt08kAk6qkuKMaIf04VX2puugKRtD1Zavwt2B1TGY/edit?usp=sharing)
 
+[You can access our tableau dashboard here](https://github.com/ktonge/group2finalproject)
+
 ## Selected Topic and Reasoning   
 As a group we're looking at combining weather and Covid 19 datasets.  We are hoping to use multiple linear regression to determine what, if any effect, does weather have on the covid infection rate. 
 
@@ -111,26 +113,28 @@ We decided to create two separate models, each corresponding to a specific set o
 
 ![resources/sparse_model_seg02.png](resources/sparse_model_seg2.png)
 
-As can be seen, the Dense Model performed far better than the sparse model. There are two possibilities that we suspect for this.
+As for our models: the Dense Model performed far better than the sparse model. There are two possibilities that we suspect for this.
 
 1. There are fewer observations in the Dense County data set, and so the model is required to generalize less than the Sparse County Model.
 
 2. There is a significant, underlying difference between the counties in the Sparse data set that is not captured in the above data.
 
 ## Conclusion
-The project aims to explore the relationship between weather and COVID-19 cases by using multiple linear regression analysis on combined datasets. The study faced challenges in determining the scope of the project due to the vast amount of available data. We focused on comparing counties with population density and mask mandates as the criteria for selection. The COVID-19 data was collected and cleaned and created new columns for future delta7 and future delta14. The questions to be answered include identifying the correlation between temperature and COVID-19 cases, regional differences in the relationship, and the potential use of machine learning models to predict COVID-19 cases based on various factors. The project has the potential to provide insights into the impact of weather on the spread of COVID-19, which could have implications for future pandemic response strategies.
+Overall, the project aimed to explore the relationship between weather and COVID-19 cases by using multiple linear regression analysis on combined datasets. The study faced challenges in determining the scope of the project due to the vast amount of available data. 
 
 ### Future Research
++ An ideal version of the study: 
+    This would include all counties in the United States, as well as additional covid information including hospitalization rates, social distancing rates, there are so many factors that could be added in to improve the quality of the model, our project was limited by time and scope.  
 + Improved understanding of the relationship between weather and Covid-19 infection rates: 
-    By using multiple linear regression to explore the relationship between weather and Covid-19 infection rates, your analysis may provide new insights into how weather conditions impact the spread of the virus. This information could be useful for public health officials and policymakers in developing targeted strategies for controlling the spread of Covid-19.
+    By using multiple linear regression to explore the relationship between weather and Covid-19 infection rates, future analysis may provide new insights into how weather conditions impact the spread of the virus. This information could be useful for public health officials and policymakers in developing targeted strategies for controlling the spread of Covid-19.
 + Identification of high-risk areas: 
     Your analysis may also help identify areas that are particularly vulnerable to Covid-19 outbreaks based on weather conditions. This information could be useful for directing resources and interventions to those areas in order to mitigate the spread of the virus.
 
 ### Limiations
 + Limiations based on our county selection
-We chose a small number of cities based on their population density and National Center for Health Statistics rating.  This was intended to create a manageable pool of data that we could process in the time provided. However, it does mean that we don't know how this model applies to rural/non-metropolitan areas. 
+    We chose a small number of cities based on their population density and National Center for Health Statistics rating.  This was intended to create a manageable pool of data that we could process in the time provided. However, it does mean that we don't know how this model applies to rural/non-metropolitan areas. 
 + Limitations to the covid data
-There were questions, for example, about counties reporting an increased number of cases on Monday because they were counting cases from the weekend in that number. We created future and past delta variables to give us a variable for active cases at one time, we were limited by the data collection.  
+    There were questions, for example, about counties reporting an increased number of cases on Monday because they were counting cases from the weekend in that number. We created future and past delta variables to give us a variable for active cases at one time, we were limited by the data collection.  
 
 ## Technologies Used
 + Python v3.10.9
