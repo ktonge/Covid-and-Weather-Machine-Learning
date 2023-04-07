@@ -12,8 +12,8 @@ When looking at databases, we discovered that our most immediate challenge would
 
 ### Questions we plan to answer with the project 
 + Does the weather have a significant impact on covid 19 cases seen in the next week?
-+ Can we use machine learning models to predict the number of COVID-19 cases based on temperature?
-+ Does the temperature two weeks previously affect the covid infection rate? 
++ Can we use machine learning models to predict the number of COVID-19 cases based on weather?
++ Does the weather two weeks previously affect the covid infection rate? 
 
 ## Data Exploration
 ### Working with the Covid Data
